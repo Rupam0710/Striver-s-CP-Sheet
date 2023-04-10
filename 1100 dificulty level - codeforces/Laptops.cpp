@@ -1,24 +1,22 @@
 #include<bits/stdc++.h>
 using namespace std;
-
-int main(){
+ 
+ 
+void solve(){
     int n;
     cin>>n;
-    vector<int>price(n);
-    vector<int>quality(n);
-    for(int i=0;i<n;i++)cin>>price[i]>>quality[i];
     
-    // sort(price.begin(),price.end());
-    // sort(quality.begin(),quality.end());
-    int flag =0;
+    int a,b;
     for(int i=0;i<n;i++){
-    if(price[i]<quality[i]){
-        flag=1;
-        break;
+        cin>>a>>b;
+        if(a<b){
+            cout<<"Happy Alex"<<endl;
+            return ;
+        }
     }
-    }
-    
-    if(flag==1)cout<<"Happy Alex"<<endl;
-    else cout<<"Poor Alex"<<endl;
+    cout<<"Poor Alex"<<endl;
+}
+int main(){
+    solve();
     return 0;
 }
